@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+:管理者: as admin
+:使用者: as user
+
+
+rectangle 賬號管理 {
+    usecase "新增賬號" as a1
+    usecase "修改會員内容" as a2
+    usecase "賬號管理" as a3
+}
+
+rectangle 訂單管理 {
+    usecase "新增訂購項目" as d1
+    usecase "修改訂購數量" as d2
+    usecase "查詢訂購項目" as d3
+    usecase "取消采購訂單" as d4
+    usecase "刪除訂購項目" as d5
+    usecase "確認采購訂單" as d6
+}
+
+rectangle 評價管理 {
+    usecase "新增評價" as c1
+    usecase "修改評價" as c2
+    usecase "刪除評價" as c3
+    usecase "查詢評價" as c4
+}
+
+rectangle 歷史資料管理 {
+    usecase "查詢歷史訂單資料" as b1
+}
+
+left to right direction
+
+@enduml
