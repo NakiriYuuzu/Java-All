@@ -9,7 +9,7 @@ public class Change16Bit {
         int n = sc.nextInt();//16
         int[] arr = new int[50];
 
-        // ascii 定義 0~9 A~z
+        // ascii 定義 0~9 A~Z
         for (int i = 0; i < 50; i++) {
             if (i < 10)
                 arr[i] = i + 48;

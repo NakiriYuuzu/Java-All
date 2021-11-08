@@ -6,7 +6,6 @@ public class Q6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-
         if (n > 999999 && n < 10000000)
             if (isPalindrome(String.valueOf(n)))
                 System.out.printf("%d: Symm7%n", n);

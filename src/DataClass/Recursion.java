@@ -4,21 +4,22 @@ import java.util.Scanner;
 
 public class Recursion {
     public static void main(String[] args) {
+        Recursion recursion = new Recursion();
         Scanner sc = new Scanner(System.in);
         try {
             System.out.println("1. N!\t2. Fib\t3. Gcd\t4. Hanoi\t");
             switch (sc.nextInt()) {
-                case 1 -> System.out.println("N! = " + N(sc.nextInt()));
-                case 2 -> System.out.println("Fib = " + Fib(sc.nextInt()));
-                case 3 -> System.out.println("Gcd = " + Gcd(sc.nextInt(), sc.nextInt()));
-                case 4 -> System.out.print("Hanoi = " + Hanoi(sc.nextInt(), 'a', 'b', 'c'));
+                case 1 -> System.out.println("N! = " + recursion.N(sc.nextInt()));
+                case 2 -> System.out.println("Fib = " + recursion.Fib(sc.nextInt()));
+                case 3 -> System.out.println("Gcd = " + recursion.Gcd(sc.nextInt(), sc.nextInt()));
+                case 4 -> System.out.print("Hanoi = " + recursion.Hanoi(sc.nextInt(), 'a', 'b', 'c'));
             }
         } catch (Exception e) {
             System.out.println("ERROR!");
         }
     }
 
-    private static int Hanoi(int n, char start, char temp, char end) {
+    public int Hanoi(int n, char start, char temp, char end) {
         int count = 0;
         if (n == 1) {
             System.out.printf("Move a disk from %c to %c.%n", start, end);
@@ -33,7 +34,7 @@ public class Recursion {
         }
     }
 
-    private static long Gcd(int n, int n1) {
+    public long Gcd(int n, int n1) {
         n *= n;
         if (n1 == 0)
             return n;
@@ -41,7 +42,7 @@ public class Recursion {
             return Gcd(n1, n % n1);
     }
 
-    private static long Fib(int n) {
+    public long Fib(int n) {
         if (n == 0)
             return 0;
         else if (n == 1)
@@ -52,7 +53,7 @@ public class Recursion {
             return 0;
     }
 
-    private static long N(int n) {
+    public static long N(int n) {
         if (n == 0 || n == 1)
             return 1;
         else if (n >= 2)
