@@ -40,7 +40,7 @@ public class Postfix_To_Infix {
 
     // Driver code
     public static void main(String[] args) {
-        String exp = "ab*c+";
+        String exp = "AB*C-DE+/";
         System.out.println(getInfix(exp));
     }
 }

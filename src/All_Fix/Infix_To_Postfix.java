@@ -78,7 +78,7 @@ public class Infix_To_Postfix {
 
     // Driver method
     public static void main(String[] args) {
-        String exp = "a+b*(c^d-e)^(f+g*h)-i";
+        String exp = "(A-B/C)*D–E/(F+G*H)+I";
         System.out.println(infixToPostfix(exp));
     }
 }

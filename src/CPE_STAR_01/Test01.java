@@ -1,23 +1,19 @@
 package CPE_STAR_01;
 
-public class Test01 {
-    public static String baseConversion(String number, int sBase, int dBase) {
-        // Parse the number with source radix
-        // and return in specified radix(base)
-        return Integer.toString(
-                Integer.parseInt(number, sBase), dBase);
-    }
+import java.util.Scanner;
 
+public class Test01 {
     public static void main(String[] args) {
-        String number = "4"; // Number
-        int sBase = 8; // Source Base Octal
-        int dBase = 10; // Destination Base Decimal
-        System.out.println(
-                "Octal to Decimal: "
-                        + baseConversion(number, sBase, dBase));
-        dBase = 16; // Destination Base Hexadecimal
-        System.out.println(
-                "Octal to Hex: "
-                        + baseConversion(number, sBase, dBase));
+        Scanner sc = new Scanner(System.in);
+        String s = "47.5";
+        for (int base : new int[] { 2, 3, 4, 5, 6, 7, 8, 9, 16, 32}) {
+            Integer i = Integer.parseInt(s, base);
+            System.out.println(base + " " + i);
+        }
+//
+//        int i = 00001010;
+//        for (int base : new int[] { 2, 3, 4, 5, 6, 7, 8, 9, 16}) {
+//            String str = Integer.toString(i, base);
+//        }
     }
 }
