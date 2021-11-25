@@ -14,7 +14,7 @@ public class Prefix_To_Postfix {
     // Convert prefix to Postfix expression
     static String preToPost(String pre_exp) {
 
-        Stack<String> s = new Stack<String>();
+        Stack<String> s = new Stack<>();
 
         // length of expression
         int length = pre_exp.length();

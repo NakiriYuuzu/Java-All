@@ -1,4 +1,4 @@
-package DataClass;
+package DataClass.recursive;
 
 import java.util.Scanner;
 
@@ -14,7 +14,6 @@ public class Recursion {
                 case 2 -> System.out.println("Fib = " + recursion.Fib(sc.nextInt()));
                 case 3 -> {System.out.println("Gcd = " + recursion.Gcd(sc.nextInt(), sc.nextInt())); System.out.println(count);}
                 case 4 -> System.out.print("Hanoi = " + recursion.Hanoi(sc.nextInt(), 'a', 'b', 'c'));
-                case 5 -> System.out.println("fact = " + recursion.fact(sc.nextInt()));
             }
         } catch (Exception e) {
             System.out.println("ERROR!");
@@ -27,10 +26,10 @@ public class Recursion {
             System.out.printf("Move a disk from %c to %c.%n", start, end);
             return 1;
         } else {
-            count = count + Hanoi(n - 1, start, end, temp);
+            count += Hanoi(n - 1, start, end, temp);
             System.out.printf("Move a disk from %c to %c.%n", start, end);
             count++;
-            count = count + Hanoi(n - 1, temp, start, end);
+            count += Hanoi(n - 1, temp, start, end);
             return count;
         }
     }
@@ -65,12 +64,5 @@ public class Recursion {
             return n * N(n - 1);
         else
             return 0;
-    }
-
-    public long fact(int n) {
-        if (n == 0)
-            return count += 51;
-        else
-            return count += 2 * fact(n - 1) + 8;
     }
 }

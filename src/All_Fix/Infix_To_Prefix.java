@@ -11,7 +11,7 @@ public class Infix_To_Prefix {
     }
 
     // Function to find priority
-// of given operator.
+    // of given operator.
     static int getPriority(char C)
     {
         if (C == '-' || C == '+')
